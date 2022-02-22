@@ -1,3 +1,13 @@
+const CIPluginOpt = {
+	// 微信小程序
+	weapp: {
+		appid: "wx471fd496761ece6a",
+		privateKeyPath: "./private.wx471fd496761ece6a.key"
+	},
+	version: "1.0.2",
+	desc: "版本描述"
+}
+
 const config = {
   projectName: "at-deploy",
   date: "2022-2-22",
@@ -9,7 +19,7 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-  plugins: [],
+  plugins: [["@tarojs/plugin-mini-ci", CIPluginOpt]],
   defineConstants: {},
   copy: {
     patterns: [],
